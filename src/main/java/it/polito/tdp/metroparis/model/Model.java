@@ -101,7 +101,7 @@ public class Model {
 	// <nuovo vertice scoperto, vertice da cui l'ho scoperto>
 	
 	public Map<Fermata, Fermata> alberoVisita(Fermata source) {
-		Map<Fermata,Fermata> albero = new HashMap<>();
+		final Map<Fermata,Fermata> albero = new HashMap<>();
 		albero.put(source, null) ;
 		
 		GraphIterator<Fermata, DefaultEdge> bfv = new BreadthFirstIterator<>(graph, source);
